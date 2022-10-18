@@ -1,0 +1,8 @@
+﻿@using System.Security.Claims;
+@{
+    var usuario = User.FindFirst(ClaimTypes.Name);
+}
+<h1>Bienvenido @usuario</h1>
+
+<br/>
+<a asp-controller="Cuenta" asp-action="Logout">Salir de la cuenta</a>
