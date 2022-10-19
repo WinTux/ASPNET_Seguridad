@@ -23,6 +23,12 @@ namespace ASPNET_Seguridad.Controllers
 
         public IActionResult Index()
         {
+            //Abrir *.csproj y agregar lo que está en las lineas 6 a 8 (nombre arbitrario)
+            //Ver > Terminal (o solo presionar Crtl+ñ)
+            //Nos vamos hasta el folder de nuestro proyecto (NO el de la solución)
+            //dotnet user-secrets set "usuario" "pepe"
+            //Podemos ver los valores en: 
+            //C:\Users\<Uusario>\AppData\Roaming\Microsoft\UserSecrets\<Nombre_UserSecretsId>
             var unValor = _config["usuario"];
             ViewBag.val = unValor;
             return View();
