@@ -5,3 +5,16 @@
 <ejemplo1/>
 <br/>
 <ejemplo2/>
+
+<br/>
+<h1>Trabajando con QR</h1>
+<form asp-controller="Generador" asp-action="Generar" method="POST">
+    <input type="text" placeholder="Ingrese su texto" name="textoCod" value="@ViewBag.texto" />
+    <br/>
+    <input type="submit" value="Generar"/>
+</form>
+
+@if(@ViewBag.texto != null){
+    <qr contenido="@ViewBag.texto" ancho="150" alto="150" /> <br/>
+    <barra contenido="@ViewBag.texto" ancho="300" alto="150" />
+}

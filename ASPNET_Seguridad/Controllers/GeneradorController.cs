@@ -8,5 +8,10 @@ namespace ASPNET_Seguridad.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Generar(string textoCod) {
+            ViewBag.texto = textoCod;
+            return View("Index");
+        }
     }
 }
